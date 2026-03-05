@@ -49,3 +49,15 @@ Weekly nerd  04/03/2026
 ![foto van de slide](<WhatsApp Image 2026-03-04 at 16.02.25.jpeg>)
 
 - View transitions is een nieuwe CSS ding. Het switch’s van Pages bijvoorbeeld als je de taal wil verwisselen.
+
+### Daily check out 05/03/2026
+Wat heb ik vandaag gedaan? 
+ik heb vandaag de workshop gevolgd van @properties. Ik heb daar gevolgd hoe ik me kleuren goed kan animeren. Daarna heb ik me controller proberen af te krijgen. Ik heb nu dit. ![image controller](image.png)
+
+Hoeveel tijd heeft me dat gekost? Het heeft me ongveer 1 uurtje gekost om de workshop te volgen. Daarna heb ik ongeveer 3-4 uren aan mijn werk besteedt.
+
+Wat heb ik geleerd? ik heb geleerd hoe ik met properties kan werken. En hoe ik de kleuren dus goed kan laten switchen, want normaliter gebruik je animation, maar nu niet.
+
+Wat ga ik morgen doen? Morgen ga ik me css meer stijlen en me controller afmaken.en me voortgang gesprek voeren.
+
+bronnen;

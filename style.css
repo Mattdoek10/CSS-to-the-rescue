@@ -8,6 +8,8 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 1vmin;
+    /* max-width: 35em; */
     /* background: #222; */
 }
 
@@ -15,11 +17,17 @@ main form {
     display: flex;
     /* width: 80vw; */
     /* max-width: 600px; */
-    padding: 8vmin 4vmin 4vmin 4vmin;
+    padding: 8vmin 4vmin 0 4vmin;
     /* background: #444; */
     border: 1px solid black;
     border-radius: 70px 70px 0px 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
 }
+
+
 
 main form fieldset {
     border: none;
@@ -77,7 +85,7 @@ main form > fieldset:nth-of-type(1) label:nth-of-type(4) {
 }
 
 main form > fieldset:nth-of-type(1) input {
-    /* opacity: 0; */
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -87,7 +95,7 @@ main form > fieldset:nth-of-type(2) {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    row-gap: 5vmin;
+    row-gap: 2vmin;
 
     & input {
     /* opacity: 0; */
@@ -187,7 +195,7 @@ main form > fieldset:nth-of-type(3) label:nth-of-type(4) {
 }
 
 main form > fieldset:nth-of-type(3) input {
-    /* opacity: 0; */
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -197,21 +205,102 @@ main form label:active {
     filter: brightness(0.7);
 }
 
-/* theme / on‑off buttons inside middle section */
-/* main form > fieldset:nth-of-type(2) > fieldset {
-    display: flex;
-    gap: 1vmin;
-} */
+main > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    /* margin: 2em; */
 
-/* main form > fieldset:nth-of-type(2) label {
-    background: grey;
-    padding: 1vmin 2vmin;
-    border-radius: 2vmin;
-    cursor: pointer;
-} */
+    & div:nth-of-type(1) {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        padding: 6vmin 0;
+        background-color: #888;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        /* border: 10px solid #888; */
+    }
 
-/* main form > fieldset:nth-of-type(2) input {
-    /* opacity: 0; 
-    display: none;
-    position: absolute;
-} */
+    & div:nth-of-type(2) {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        padding: 1vmin;
+        background-color: #888;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        /* border: 10px solid #888; */
+
+
+    }
+
+    & div:nth-of-type(3) {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        padding: 1vmin;
+        background-color: #888;
+        border-radius: 50% 50% 50% 50% / 0% 0% 100% 100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+    }
+
+    & div:nth-of-type(4) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        padding: 1vmin;
+        background-color: #888;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    & div:nth-of-type(5) {
+        grid-column: 4/5;
+        grid-row: 1/3;
+        padding: 1vmin;
+        background-color: #888;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    & div:nth-of-type(6) {
+        grid-column: 5/6;
+        grid-row: 1/3;
+        padding: 1vmin;
+        background-color: #888;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    & div:nth-of-type(7) {
+        grid-column: 4/6;
+        grid-row: 3/4;
+        padding: 1vmin;
+        background-color: #888;
+        border-radius: 50% 50% 50% 50% / 0% 0% 100% 100% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+@media (max-width: 30vw) {
+        main form {
+        
+        width: 10vw; }
+    }
