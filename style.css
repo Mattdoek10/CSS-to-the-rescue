@@ -1,3 +1,217 @@
 * {
     box-sizing: border-box;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #222; */
+}
+
+main form {
+    display: flex;
+    /* width: 80vw; */
+    /* max-width: 600px; */
+    padding: 8vmin 4vmin 4vmin 4vmin;
+    /* background: #444; */
+    border: 1px solid black;
+    border-radius: 70px 70px 0px 0px;
+}
+
+main form fieldset {
+    border: none;
+    position: relative;
+}
+
+/* ------------------------ */
+
+main form > fieldset:nth-of-type(1) {
+    width: 20vmin;
+    height: 20vmin;
+}
+
+main form > fieldset:nth-of-type(1) label {
+    position: absolute;
+    width: 6vmin;
+    height: 4vmin;
+    background: #888;
+    border-radius: 50% 10% 10% 50%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    cursor: pointer;
+    font-size: 0; /* schuilt text binnein */
+}
+
+/* arrows for pad directions */
+
+main form > fieldset:nth-of-type(1) label:nth-of-type(1) {
+    /* up */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+main form > fieldset:nth-of-type(1) label:nth-of-type(2) {
+    /* right */
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+main form > fieldset:nth-of-type(1) label:nth-of-type(3) {
+    /* down */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+}
+
+main form > fieldset:nth-of-type(1) label:nth-of-type(4) {
+    /* left */
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+main form > fieldset:nth-of-type(1) input {
+    /* opacity: 0; */
+    cursor: pointer;
+}
+
+/* centre controls */
+main form > fieldset:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    row-gap: 5vmin;
+
+    & input {
+    /* opacity: 0; */
+    display: none;
+    position: absolute;
+}
+
+    & label {
+        background: grey;
+        padding: 1vmin 1vmin;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 2.5vmin;
+    }
+
+    & fieldset:nth-of-type(1) {
+        padding: 0;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    & fieldset:nth-of-type(2) {
+        padding: 0;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        /* display: flex; */
+
+
+        & label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1vmin;
+        }
+    }
+
+    & fieldset:nth-of-type(3) {
+        padding: 0;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & label {
+            padding-left: 2.5vmin;
+            padding-right: 2.5vmin;
+        }
+    }
+}
+
+/* action buttons */
+main form > fieldset:nth-of-type(3) {
+    width: 20vmin;
+    height: 20vmin;
+}
+
+main form > fieldset:nth-of-type(3) label {
+    position: absolute;
+    width: 5vmin;
+    height: 5vmin;
+    background: #e33;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main form > fieldset:nth-of-type(3) label:nth-of-type(1) {
+    /* top */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main form > fieldset:nth-of-type(3) label:nth-of-type(2) {
+    /* right */
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main form > fieldset:nth-of-type(3) label:nth-of-type(3) {
+    /* bottom */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main form > fieldset:nth-of-type(3) label:nth-of-type(4) {
+    /* left */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main form > fieldset:nth-of-type(3) input {
+    /* opacity: 0; */
+    cursor: pointer;
+}
+
+/* feedback */
+main form label:hover,
+main form label:active {
+    filter: brightness(0.7);
+}
+
+/* theme / on‑off buttons inside middle section */
+/* main form > fieldset:nth-of-type(2) > fieldset {
+    display: flex;
+    gap: 1vmin;
+} */
+
+/* main form > fieldset:nth-of-type(2) label {
+    background: grey;
+    padding: 1vmin 2vmin;
+    border-radius: 2vmin;
+    cursor: pointer;
+} */
+
+/* main form > fieldset:nth-of-type(2) input {
+    /* opacity: 0; 
+    display: none;
+    position: absolute;
+} */

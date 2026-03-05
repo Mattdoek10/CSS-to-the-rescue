@@ -24,3 +24,28 @@ Wat heb ik geleerd? ik heb geleerd hoe carousel via css alleen kan gebruiken, oo
 Wat ga ik morgen doen? Morgen ga ik me voortgang bespreken met de docent tijdens de weekly meeting.
 
 bronnen;
+
+### Daily check out 04/03/2026
+Wat heb ik vandaag gedaan? 
+ik heb vandaag de weekly geek gevolgd van .... Daarna ben ik aan de slag gegaan met mijn website. Ik heb de HTML geschreven en de css een begin gemaakt.
+
+Hoeveel tijd heeft me dat gekost? Het heeft me ongveer 1 uurtje gekost om de weekly geek te volgen. Daarna ongeveer 3-4 uren aan mijn eigen werk
+
+Wat heb ik geleerd? ik heb geleerd hoe ik een aantal images kan gebruiken om een video achtig achtergrond te laten werken.
+
+Wat ga ik morgen doen? Morgen ga ik me css meer stijlen en me controller afmaken.
+
+bronnen;
+
+### weekly Nerd 3
+Weekly nerd  04/03/2026
+
+- Vroeger gebruikte mensen Photoshop om websites te maken, nu gebruiken mensen figma.
+- Figma gebruikt termen die makkelijker zijn voor de code groep zodat ze die makkelijker kunnen implementeren in de website. 
+- Figma helpt ons om websites te maken, met Photoshop kon je niet alles maken in de web maar met figma wel. Dus alles in figma gemaakt kan worden gecodeerd. 
+![image over figma opties](<WhatsApp Image 2026-03-04 at 16.02.26.jpeg>)
+
+- Ipv video kan je aantal foto’s naast elkaar zetten en dan met animation erop zetten 
+![foto van de slide](<WhatsApp Image 2026-03-04 at 16.02.25.jpeg>)
+
+- View transitions is een nieuwe CSS ding. Het switch’s van Pages bijvoorbeeld als je de taal wil verwisselen.
