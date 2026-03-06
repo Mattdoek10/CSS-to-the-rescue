@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 40em;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -15,16 +19,12 @@ main {
 
 main form {
     display: flex;
-    /* width: 80vw; */
-    /* max-width: 600px; */
-    padding: 8vmin 4vmin 0 4vmin;
-    /* background: #444; */
+    padding: 3vmin 4vmin 0 4vmin;
     border: 1px solid black;
     border-radius: 70px 70px 0px 0px;
     width: 100%;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
 }
 
 
@@ -36,10 +36,14 @@ main form fieldset {
 
 /* ------------------------ */
 
-main form > fieldset:nth-of-type(1) {
-    width: 20vmin;
-    height: 20vmin;
-}
+/* main form > fieldset:nth-of-type(1) {
+
+    display: grid;
+    grid-template-columns: 5vmin 5vmin 5vmin;
+    grid-template-rows:    5vmin 5vmin 5vmin;
+    gap: 5px;
+    width: fit-content;
+} */
 
 main form > fieldset:nth-of-type(1) label {
     position: absolute;
@@ -47,42 +51,59 @@ main form > fieldset:nth-of-type(1) label {
     height: 4vmin;
     background: #888;
     border-radius: 50% 10% 10% 50%;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     cursor: pointer;
-    font-size: 0; /* schuilt text binnein */
+    font-size: 0; /* schuilt text binnein  */
 }
+    
 
 /* arrows for pad directions */
 
-main form > fieldset:nth-of-type(1) label:nth-of-type(1) {
-    /* up */
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
-}
+main form > fieldset:nth-of-type(1) { 
 
-main form > fieldset:nth-of-type(1) label:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 5vmin 5vmin 5vmin;
+    grid-template-rows:    5vmin 5vmin 5vmin;
+    gap: 5px;
+
+    label:nth-of-type(1) {
+        /* up */
+        /* top: 0; */
+        /* left: 50%; */
+        transform: rotate(90deg);
+        grid-column: 2; 
+        grid-row: 1;
+
+    }
+
+    label:nth-of-type(2) {
     /* right */
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%) rotate(180deg);
+    /* top: 50%;
+    right: 0; */
+    transform: rotate(180deg);
+    grid-column: 3; 
+    grid-row: 2;
 }
 
-main form > fieldset:nth-of-type(1) label:nth-of-type(3) {
+label:nth-of-type(3) {
     /* down */
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(-90deg);
+    /* bottom: 0;
+    left: 50%; */
+    transform: rotate(-90deg);
+    grid-column: 2; 
+    grid-row: 3;
 }
 
-main form > fieldset:nth-of-type(1) label:nth-of-type(4) {
+label:nth-of-type(4) {
     /* left */
-    top: 50%;
+    /* top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
+    grid-column: 1; 
+    grid-row: 2;
 }
+
+}
+
 
 main form > fieldset:nth-of-type(1) input {
     opacity: 0;
@@ -97,13 +118,13 @@ main form > fieldset:nth-of-type(2) {
     align-items: center;
     row-gap: 2vmin;
 
-    & input {
+    input {
     /* opacity: 0; */
     display: none;
     position: absolute;
 }
 
-    & label {
+    label {
         background: grey;
         padding: 1vmin 1vmin;
         border-radius: 6px;
@@ -111,7 +132,7 @@ main form > fieldset:nth-of-type(2) {
         font-size: 2.5vmin;
     }
 
-    & fieldset:nth-of-type(1) {
+    fieldset:nth-of-type(1) {
         padding: 0;
         grid-column: 1/2;
         grid-row: 1/2;
@@ -121,14 +142,14 @@ main form > fieldset:nth-of-type(2) {
 
     }
 
-    & fieldset:nth-of-type(2) {
+    fieldset:nth-of-type(2) {
         padding: 0;
         grid-column: 2/3;
         grid-row: 2/3;
         /* display: flex; */
 
 
-        & label {
+        label {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -136,7 +157,7 @@ main form > fieldset:nth-of-type(2) {
         }
     }
 
-    & fieldset:nth-of-type(3) {
+    fieldset:nth-of-type(3) {
         padding: 0;
         grid-column: 3/4;
         grid-row: 1/2;
@@ -144,7 +165,7 @@ main form > fieldset:nth-of-type(2) {
         justify-content: center;
         align-items: center;
 
-        & label {
+        label {
             padding-left: 2.5vmin;
             padding-right: 2.5vmin;
         }
@@ -152,13 +173,18 @@ main form > fieldset:nth-of-type(2) {
 }
 
 /* action buttons */
-main form > fieldset:nth-of-type(3) {
-    width: 20vmin;
-    height: 20vmin;
-}
+/* main form > fieldset:nth-of-type(3) {
+    display: grid;
+    grid-template-columns: 5vmin 5vmin 5vmin;
+    grid-template-rows:    5vmin 5vmin 5vmin;
+    gap: 2px;
+    width: fit-content;
+    height: fit-content;
+} */
 
 main form > fieldset:nth-of-type(3) label {
-    position: absolute;
+    /* position: static;  */
+    /* transform: none; */
     width: 5vmin;
     height: 5vmin;
     background: #e33;
@@ -166,43 +192,50 @@ main form > fieldset:nth-of-type(3) label {
     cursor: pointer;
 }
 
-main form > fieldset:nth-of-type(3) label:nth-of-type(1) {
-    /* top */
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+main form > fieldset:nth-of-type(3) {
+
+    display: grid;
+    grid-template-columns: 5vmin 5vmin 5vmin;
+    grid-template-rows:    5vmin 5vmin 5vmin;
+    gap: 2px;
+    width: fit-content;
+    height: fit-content;
+
+
+    label:nth-of-type(1) {
+        /* top */
+        
+        grid-column: 2; 
+        grid-row: 1;
+    }
+
+    label:nth-of-type(2) {
+        /* right */
+        
+        grid-column: 3; 
+        grid-row: 2;
+    }
+
+    label:nth-of-type(3) {
+        /* bottom */
+    
+        grid-column: 2; 
+        grid-row: 3;
+    }
+
+    label:nth-of-type(4) {
+        /* left */
+
+        grid-column: 1; 
+        grid-row: 2;
+    }
+
 }
 
-main form > fieldset:nth-of-type(3) label:nth-of-type(2) {
-    /* right */
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-main form > fieldset:nth-of-type(3) label:nth-of-type(3) {
-    /* bottom */
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-main form > fieldset:nth-of-type(3) label:nth-of-type(4) {
-    /* left */
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
 main form > fieldset:nth-of-type(3) input {
     opacity: 0;
     cursor: pointer;
-}
-
-/* feedback */
-main form label:hover,
-main form label:active {
-    filter: brightness(0.7);
 }
 
 main > div {
@@ -258,7 +291,7 @@ main > div {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        color: transparent;
 
     }
 
@@ -270,7 +303,7 @@ main > div {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        color: transparent;
 
     }
 
@@ -282,7 +315,7 @@ main > div {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        color: transparent;
 
     }
 
@@ -295,12 +328,12 @@ main > div {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        color: transparent;
     }
 }
 
-@media (max-width: 30vw) {
+/* @media (max-width: 30vw) {
         main form {
         
         width: 10vw; }
-    }
+    } */
