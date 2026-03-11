@@ -61,3 +61,15 @@ Wat heb ik geleerd? ik heb geleerd hoe ik met properties kan werken. En hoe ik d
 Wat ga ik morgen doen? Morgen ga ik me css meer stijlen en me controller afmaken.en me voortgang gesprek voeren.
 
 bronnen;
+
+### Daily check out 11/03/2026
+Wat heb ik vandaag gedaan? 
+ik heb vandaag mijn tv gezet in de html en css en een beetje syijl gegeven. Daarna heb ik de knoppen aan de linkerkant laten werken. Maar ik heb het niet goed genoeg laten werken. Ik heb ook een tijdje gezeten aan de responsive van me controller, Dus als het groot scherm is wil ik dat het een beetje kleiner eruit ziet maar het komt uit de scherm dus ik moet dat nog afmaken.
+
+Hoeveel tijd heeft me dat gekost? Het heeft me ongveer 2-3 uurtjes gekost. 
+
+Wat heb ik geleerd? ik heb geleerd hoe ik met pde radiobuttons het blokje kan laten bewegen
+
+Wat ga ik morgen doen? Morgen ga ik me animatie goed laten werken en de knoppen beter stijl geven.
+
+bronnen;
