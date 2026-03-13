@@ -66,10 +66,26 @@ bronnen;
 Wat heb ik vandaag gedaan? 
 ik heb vandaag mijn tv gezet in de html en css en een beetje syijl gegeven. Daarna heb ik de knoppen aan de linkerkant laten werken. Maar ik heb het niet goed genoeg laten werken. Ik heb ook een tijdje gezeten aan de responsive van me controller, Dus als het groot scherm is wil ik dat het een beetje kleiner eruit ziet maar het komt uit de scherm dus ik moet dat nog afmaken.
 
+![alt text](image-1.png)
+
 Hoeveel tijd heeft me dat gekost? Het heeft me ongveer 2-3 uurtjes gekost. 
 
 Wat heb ik geleerd? ik heb geleerd hoe ik met pde radiobuttons het blokje kan laten bewegen
 
 Wat ga ik morgen doen? Morgen ga ik me animatie goed laten werken en de knoppen beter stijl geven.
+
+bronnen;
+
+### Daily check out 12/03/2026
+Wat heb ik vandaag gedaan? 
+ik heb vandaag de workshop ghevolgd voor typografie, en daarna ben ik aan de slag gegaan met mijn eigen werk. Ik zat heel lang aan mijn knoppeb, dus om ze te laten werken, want mijn vierkantje ging bewegen vanuit de start punt en vanuit die punt bewegen. Maar ik wil dat het vanaf de punt moest bewegen van waar hij zich op het moment bevind. En ik heb dit aan sanne gevraagd maar hij kon me niet meteen helpen dus ben ik verder gegaan met stijlen en responsive maken van me website. Ook heb ik me controller aangepast en de onder gedeelte weggehaald want ik vind dat hij er niet zo mooi uit ziet.
+
+![alt text](image-2.png)
+
+Hoeveel tijd heeft me dat gekost? Het heeft me ongveer 4 uurtjes gekost. 
+
+Wat heb ik geleerd? ik heb geleerd hoe je met wiskunde dingen in css kan laten animeren etc, heel byzonder en tof.
+
+Wat ga ik morgen doen? Morgen ga ik me knoppen laten werken mbv Sanne en de stijl beter maken.
 
 bronnen;
