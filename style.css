@@ -2,6 +2,32 @@
     box-sizing: border-box;
 }
 
+
+/* Bron: Jacco heeft mij de code toegestuurd en de website vanwaar ik het kon halen https://mtdvlpr.github.io/CSSttR-assignment/ en https://codepen.io/Jacco01/pen/GgjNOqr?editors=1100 */
+@property --x {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0.5;
+}
+
+@property --y {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0.5;
+}
+/* voorbeeld gehaald van https://codepen.io/crossdjinn/pen/PdeJbM */
+@keyframes tvAan {
+    0%   { transform: scaleY(0); }
+    50%  { transform: scaleY(0.02); }
+    100% { transform: scaleY(1); }
+}
+
+@keyframes tvUit {
+    0%   { transform: scaleY(1); }
+    50%  { transform: scaleY(0.02); }
+    100% { transform: scaleY(0); }
+}
+
 body {
     
     display: flex;
@@ -12,40 +38,53 @@ body {
 
 
     /* ── Beweging via radio buttons ── */
-    &:has(input[value="omhoog"]:checked) header article section h2 {
-    animation: naarBoven  0.5s ease-in-out forwards;
-}
 
-&:has(input[value="rechts"]:checked) header article section h2 {
-    animation: naarRechts 0.5s ease-in-out forwards;
-}
+    transition: --x 10000s linear, --y 10000s linear;
 
-&:has(input[value="omlaag"]:checked) header article section h2 {
-    animation: naarOnder  0.5s ease-in-out forwards;
-}
+    &:has(input[value="omhoog"]:checked) {
+        --y: 0;
+    }
 
-&:has(input[value="links"]:checked) header article section h2 {
-    animation: naarLinks  0.5s ease-in-out forwards;
-}
+    &:has(input[value="omlaag"]:checked) {
+        --y: 1;
+    }
+
+    &:has(input[value="rechts"]:checked) {
+        --x: 1;
+    }
+
+    &:has(input[value="links"]:checked) {
+        --x: 0;
+    }
+
+    &:has(input[value="omhoog"]:checked),
+    &:has(input[value="omlaag"]:checked) {
+        transition: --x 10000s linear, --y 1.5s linear;
+    }
+
+    &:has(input[value="rechts"]:checked),
+    &:has(input[value="links"]:checked) {
+        transition: --x 1.5s linear, --y 10000s linear;
+    }
+
+    /* tv aan en uit  */
+    &:has(input[value="on"]:checked) section {
+        animation: tvAan 1s ease forwards;
+
+        h2 {
+            opacity: 1;
+        }
+    }
+
+    &:has(input[value="off"]:checked) section {
+        animation: tvUit 1s ease forwards;
+
+        h2 {
+            opacity: 0;
+        }
+    }
 
 }
-
-@keyframes naarLinks {
-    to   { left: 0%; }
-}
-
-@keyframes naarRechts {
-    to   { left: 100%; }
-}
-
-@keyframes naarBoven {
-    to   { top: 0%; }
-}
-
-@keyframes naarOnder {
-    to   { top: 100%; }
-}
-
 
 header {
     display: flex;
@@ -70,7 +109,7 @@ header {
         width: clamp(15em, 50vw, 60vw);
         max-width: 600px;
         aspect-ratio: 16/9;
-        /* background: #ccc; */
+        background: #414141;
         border: 0.5vw solid #333;
         border-radius: 2vw;
         position: relative;
@@ -80,19 +119,20 @@ header {
             height: 100%;
             background: #000;
             border-radius: 1vw; 
-            /* display: flex;
-            align-items: center;
-            justify-content: center; */
+            /* bron met ai; prompt "hoe kan ik de tv uit laten zijn wanneer de website load" */
+            transform: scaleY(0);
 
             > h2 {
                 position: absolute;
                 background-color: red;
                 width: 1em;
+                height: 1em;
                 color: transparent;
+                border-radius: 50%;
+                margin: 0;
 
-                top: 50%;
-                left: 50%;
-                /* transform: translate(-50%, -50%); */
+                left: calc(var(--x) * (100% - 1em));
+                top:  calc(var(--y) * (100% - 1em));
     
             }
         }
@@ -336,3 +376,4 @@ main {
         }
     } */
 }
+
