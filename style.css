@@ -313,6 +313,14 @@ main {
                     grid-column: 1;
                     grid-row: 2;
                 }
+
+                &:has(input:checked) {
+                    transform: scale(0.92);
+                    /* box-shadow: 0 0 16px currentColor, inset 0 2px 6px rgba(0,0,0,0.5); */
+                    filter: brightness(1.4);
+                }
+                
+
             }
 
             input {
