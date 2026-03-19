@@ -50,13 +50,21 @@
     to {--rainbowSpinner: 360; }
 }
 
+
 body {
     
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* max-width: 40em; */
+    --theme: normaal;
+    container-type: style;
+
+    /* gradient gemaakt met bron; https://cssgradient.io/ */
+    background: #c32298;
+    background: linear-gradient(0deg, rgba(195, 34, 152, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    background-size: cover;
+    background-attachment: fixed;
 
 
     /* ── Beweging via radio buttons ── */
@@ -123,19 +131,20 @@ body {
 
     &:has(input[value="cirkelBeneden"]:checked) section {
         h2 {
-            animation: rainbow 5s infinite;
+            animation: rainbow 500ms infinite;
 
             /* bron voor conic gradient; https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient */
+            /* met ai de kleuren laten genereren met prompt: "maak een conic gradient zodat me balletje een regenboog effect krijgt"  */
             background: conic-gradient(
-    from 0deg,
-    hsl(var(--rainbowSpinner),              90%, 55%),
-    hsl(calc(var(--rainbowSpinner) + 60),  90%, 55%),
-    hsl(calc(var(--rainbowSpinner) + 120), 90%, 55%),
-    hsl(calc(var(--rainbowSpinner) + 180), 90%, 55%),
-    hsl(calc(var(--rainbowSpinner) + 240), 90%, 55%),
-    hsl(calc(var(--rainbowSpinner) + 300), 90%, 55%),
-    hsl(var(--rainbowSpinner),              90%, 55%)
-  );
+                from 0deg,
+                hsl(var(--rainbowSpinner),              90%, 55%),
+                hsl(calc(var(--rainbowSpinner) + 60),  90%, 55%),
+                hsl(calc(var(--rainbowSpinner) + 120), 90%, 55%),
+                hsl(calc(var(--rainbowSpinner) + 180), 90%, 55%),
+                hsl(calc(var(--rainbowSpinner) + 240), 90%, 55%),
+                hsl(calc(var(--rainbowSpinner) + 300), 90%, 55%),
+                hsl(var(--rainbowSpinner),              90%, 55%)
+            );
         }
     }
 
@@ -143,6 +152,16 @@ body {
         h2 {
             background: red;
         }
+    }
+
+    /* thema knoppen */
+
+    &:has(input[value="thema2"]:checked) {
+        --theme: crazy;
+        /* bron image ;https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyajN6aHdqNWZjeWJyN2RvaHA0MmV2ejlxODZlaTEyaHc1bWVibHp4ZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/2ZYKKfCr0rkvvTkdum/giphy.gif */
+        background-image: url(https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyajN6aHdqNWZjeWJyN2RvaHA0MmV2ejlxODZlaTEyaHc1bWVibHp4ZiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/2ZYKKfCr0rkvvTkdum/giphy.gif);
+        background-attachment: fixed;
+
     }
 
 }
@@ -222,7 +241,6 @@ main {
     /* min-height: 100vh; */
     padding: 1vmin;
     
-    
 
     form {
         display: flex;
@@ -233,6 +251,7 @@ main {
         align-items: center;
         justify-content: center;
         background: linear-gradient(160deg, #000000, #16161f);
+        
 
         fieldset {
             border: none;
@@ -308,7 +327,6 @@ main {
             }
 
             label {
-                background: grey;
                 padding: 1vmin 1vmin;
                 border-radius: 6px;
                 cursor: pointer;
@@ -319,7 +337,6 @@ main {
                 border-radius:18px;
                 cursor:pointer;
                 color:#ffffff;
-                text-shadow:0px 1px 0px #810e05;
 
                 &:has(input:checked) {
                     transform: scale(0.9);
@@ -444,7 +461,6 @@ main {
 
                 &:hover {
                     background:linear-gradient(to bottom, #7c7c7c 5%, #e9e2e2 100%);
-	                background-color:#b8b8b8;
                 }
                 
 
@@ -456,59 +472,81 @@ main {
             }
         }
     }
-
-    /* > div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        width: 100%;
-
-        div {
-            padding: 1vmin;
-            background-color: #888;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: transparent;
-        }
-
-        div:nth-of-type(1) {
-            grid-column: 1/2;
-            grid-row: 1/3;
-            padding: 6vmin 0;
-        }
-
-        div:nth-of-type(2) {
-            grid-column: 2/3;
-            grid-row: 1/3;
-        }
-
-        div:nth-of-type(3) {
-            grid-column: 1/3;
-            grid-row: 3/4;
-            border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
-        }
-
-        div:nth-of-type(4) {
-            grid-column: 3/4;
-            grid-row: 1/2;
-        }
-
-        div:nth-of-type(5) {
-            grid-column: 4/5;
-            grid-row: 1/3;
-        }
-
-        div:nth-of-type(6) {
-            grid-column: 5/6;
-            grid-row: 1/3;
-        }
-
-        div:nth-of-type(7) {
-            grid-column: 4/6;
-            grid-row: 3/4;
-            border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
-        }
-    } */
 }
 
+@container style(--theme: crazy) {
+
+    header {
+        > article {
+            background: hsl(51, 100%, 50%);
+            border: 0.5vw solid hsl(51, 100%, 50%);
+        }
+    }
+
+    main {
+
+        form {
+
+            > fieldset:nth-of-type(3) {
+                label {
+                    box-shadow: 0px 4px 0px 0px hsl(51, 100%, 36%);
+                    background:linear-gradient(to bottom, hsl(51, 100%, 50%) 5%, #fff9b5 100%);
+                    border:1px solid hsl(51, 94%, 81%);
+
+                    &:hover {
+                    background:linear-gradient(to bottom, #fff9b5 5%, hsl(51, 100%, 50%) 100%);
+                    }
+                }
+            }
+
+            > fieldset:nth-of-type(1) {
+                label {
+
+                    &:nth-of-type(1) {
+                    background:linear-gradient(to bottom, hsl(51, 100%, 50%) 5%, #fff9b5 100%);
+                    border:1px solid hsl(51, 94%, 81%);
+                    box-shadow: 4px 0px 0px 0px hsl(51, 100%, 36%);
+                    }
+
+                    &:nth-of-type(2) {
+                    background:linear-gradient(to bottom, hsl(51, 100%, 50%) 5%, #fff9b5 100%);
+                    border:1px solid hsl(51, 94%, 81%);
+                    box-shadow: 0px -4px 0px 0px hsl(51, 100%, 36%);
+                    }
+
+                    &:nth-of-type(3) {
+                    background:linear-gradient(to bottom, hsl(51, 100%, 50%) 5%, #fff9b5 100%);
+                    border:1px solid hsl(51, 94%, 81%);
+                    box-shadow: -4px 0px 0px 0px hsl(51, 100%, 36%);
+                    }
+
+                    &:nth-of-type(4) {
+                    background:linear-gradient(to bottom, hsl(51, 100%, 50%) 5%, #fff9b5 100%);
+                    border:1px solid hsl(51, 94%, 81%);
+                    box-shadow: 0px 4px 0px 0px hsl(51, 100%, 36%);
+                    }
+
+                    &:hover {
+                    background:linear-gradient(to bottom, #fff9b5 5%, hsl(51, 100%, 50%) 100%);
+                    }
+                }
+            }
+
+            > fieldset:nth-of-type(2) {
+                label {
+                    color: black;
+                    box-shadow: 0px 4px 0px 0px hsl(51, 100%, 36%);
+                    background:linear-gradient(to bottom, hsl(51, 100%, 50%) 5%, #fff9b5 100%);
+                    border:1px solid hsl(51, 94%, 81%);
+
+                    &:hover {
+                        background:linear-gradient(to bottom, #fff9b5 5%, hsl(51, 100%, 50%) 100%);
+                    }
+                }
+            }
+
+        }
+    
+    }
+
+}
